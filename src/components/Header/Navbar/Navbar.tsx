@@ -4,14 +4,13 @@ import { Link } from 'react-router-dom';
 
 export default function Navbar() {
     const burgerToggler = () => {
+        const burger = document.querySelector(
+            '.navbar__burger',
+        ) as HTMLSpanElement;
         const categories = document.querySelector(
             '.navbar__categories',
         ) as HTMLUListElement;
         categories.classList.toggle('navbar__categories--open');
-
-        const burger = document.querySelector(
-            '.navbar__burger',
-        ) as HTMLSpanElement;
         burger.classList.toggle('navbar__burger--open');
     };
 

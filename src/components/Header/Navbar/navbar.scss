@@ -11,8 +11,12 @@
         gap: 2rem;
         opacity: 0;
         height: 2rem;
-
         transition-duration: 0.5s;
+        align-items: center;
+
+        @media (min-width: 1050px) {
+            opacity: 1;
+        }
 
         &--open {
             height: 17rem;
@@ -48,6 +52,12 @@
         justify-content: center;
         align-items: center;
         transition-duration: 0.5s;
+        opacity: 0;
+        cursor: pointer;
+
+        @media (max-width: 1050px) {
+            opacity: 1;
+        }
 
         &::before {
             content: '';
