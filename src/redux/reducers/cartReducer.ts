@@ -31,7 +31,7 @@ type Action = {
     size: string;
 };
 
-const cartReducer = (state = initialState, action: Action) => {
+const cartReducer = (state = initialState, action: any) => {
     switch (action.type) {
         case ADD_TO_CART:
             const newList = [...state.list, action.product];

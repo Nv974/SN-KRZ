@@ -75,14 +75,14 @@ export default function Cart() {
                     <div className='cart__right__header__title'>Mon Panier</div>
                 </div>
 
-                {cartList.length !> 1 && (
+                {cartList.length < 1 && (
                     <div> Il n'y a aucun produit dans le panier </div>
                 )}
 
                 {cartList.map((item: ItemProps) => (
                     <Item item={item} key={Math.random()} />
                 ))}
-                {cartList.length > 1 && (
+                {cartList.length > 0 && (
                     <>
                         <div className='cart__right__sub'>
                             <span>Sous-total</span>{' '}

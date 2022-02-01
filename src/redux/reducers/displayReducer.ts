@@ -11,7 +11,7 @@ type Action = {
     bool: boolean;
 };
 
-const cartReducer = (state = initialState, action: Action) => {
+const cartReducer = (state = initialState, action: any) => {
     switch (action.type) {
         case SHOW_CART:
             return {

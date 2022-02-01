@@ -12,7 +12,7 @@ type Action = {
     payment: string;
 };
 
-const orderReducer = (state = initialState, action: Action) => {
+const orderReducer = (state = initialState, action: any) => {
     switch (action.type) {
         case ADD_ORDER:
             return {
