@@ -1,0 +1,61 @@
+.product {
+    width: 24rem;
+    margin: 1rem;
+    padding: 1rem 0;
+    &__img {
+        margin: 1rem;
+        cursor: pointer;
+        img {
+            width: 22rem;
+            //animation: move 0.5s;
+            position: relative;
+
+            &:hover {
+                //animation: fadeImg 1s;
+            }
+
+            @keyframes fadeImg {
+                from {
+                    transform: rotateY(-30deg);
+                }
+                to {
+                    transform: rotateY(0);
+                }
+            }
+        }
+    }
+
+    &__infos {
+        display: flex;
+        flex-direction: column;
+        height: 95px;
+        position: relative;
+        &__name {
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        &__brand {
+            text-transform: capitalize;
+            font-size: 0.9rem;
+            color: gray;
+        }
+        &__price {
+            position: absolute;
+            bottom: 0;
+            font-size: 0.9rem;
+        }
+    }
+
+    border-bottom: rgb(230, 230, 230) 1px solid;
+}
+
+@keyframes move {
+    from {
+        opacity: 0;
+        left: 50rem;
+    }
+    to {
+        opacity: 1;
+        left: 0;
+    }
+}

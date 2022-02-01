@@ -1,0 +1,22 @@
+.navbar {
+    display: flex;
+    justify-content: center;
+    &__categories {
+        list-style: none;
+        display: flex;
+        padding: 0 auto;
+        gap: 2rem;
+
+        li {
+            text-transform: uppercase;
+
+            a {
+                text-decoration: none;
+                color: #000;
+                font-weight: bold;
+            }
+        }
+    }
+
+    border-bottom: 1px solid rgb(219, 219, 219);
+}

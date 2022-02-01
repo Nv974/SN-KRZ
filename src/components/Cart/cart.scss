@@ -1,0 +1,211 @@
+.cart {
+    &__right {
+        height: 100vh;
+        width: 25rem;
+        position: fixed;
+        top: 0;
+        right: -50rem;
+        background-color: rgb(255, 255, 255);
+        z-index: 1;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        overflow: scroll;
+
+        &--close {
+            height: 100vh;
+            width: 25rem;
+            position: fixed;
+            top: 0;
+            right: -50rem;
+            background-color: rgb(255, 255, 255);
+            z-index: 1;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            overflow: scroll;
+            animation: slideToRight 0.5s;
+        }
+        @keyframes slideToRight {
+            from {
+                right: 0;
+            }
+
+            to {
+                right: -50rem;
+            }
+        }
+
+        &--show {
+            height: 100vh;
+            width: 25rem;
+            position: fixed;
+            top: 0;
+            right: 0;
+            background-color: rgb(255, 255, 255);
+            z-index: 1;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            overflow: scroll;
+            animation: slideToLeft 0.5s;
+        }
+
+        @keyframes slideToLeft {
+            from {
+                right: -50rem;
+            }
+
+            to {
+                right: 0;
+            }
+        }
+
+        &--hidden {
+            height: 100vh;
+            width: 25rem;
+            position: fixed;
+            top: 0;
+            right: -50rem;
+            background-color: rgb(255, 255, 255);
+            z-index: 1;
+            padding: 1rem 2rem;
+        }
+
+        &__header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+            position: relative;
+            justify-content: space-between;
+            border-bottom: 1px solid rgb(201, 201, 201);
+            padding-bottom: 1rem;
+
+            &__title {
+                font-size: 1.7rem;
+                font-weight: bold;
+            }
+
+            &__close {
+                button {
+                    transform: rotateZ(45deg);
+                    background: none;
+                    border: none;
+                    font-size: 3rem;
+                    width: 0;
+                    height: 0;
+                    cursor: pointer;
+                    position: relative;
+                    bottom: 0.4rem;
+                }
+            }
+        }
+
+        &__infos {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+            border-bottom: 1px solid rgb(173, 173, 173);
+            padding-bottom: 1rem;
+            width: 100%;
+
+            &__name {
+                font-weight: bold;
+            }
+            &__brand {
+                text-transform: capitalize;
+                color: rgb(133, 133, 133);
+            }
+            &__size {
+                font-size: 0.9rem;
+            }
+            &__price {
+                text-align: end;
+            }
+
+            &__right {
+                width: 100%;
+            }
+
+            &__bottom {
+                margin-top: 1rem;
+
+                &__select {
+                    border: 1px solid rgb(199, 199, 199);
+                    width: 4rem;
+                    padding: 0.5rem;
+                    border-radius: 2px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    span {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        &__sub {
+            margin-top: 1rem;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__order {
+            background-color: black;
+            border: none;
+            color: white;
+            padding: 0.8rem;
+            margin-top: 1rem;
+            display: flex;
+            justify-content: center;
+            border-radius: 5px;
+            width: 100%;
+            font-weight: bold;
+            font-size: 1.1rem;
+            cursor: pointer;
+        }
+        &__shop {
+            background-color: white;
+            border: none;
+            color: black;
+            padding: 0.8rem;
+            margin-top: 1rem;
+            display: flex;
+            justify-content: center;
+            border-radius: 5px;
+            width: 100%;
+            font-weight: bold;
+            font-size: 1.1rem;
+            cursor: pointer;
+            margin-bottom: 2rem;
+        }
+    }
+    &__left {
+        &--show {
+            height: 100vh;
+            width: 100vw;
+            position: fixed;
+            top: 0;
+            right: 0;
+            background-color: rgba(88, 88, 88, 0.459);
+            z-index: 1;
+            cursor: pointer;
+            animation: fadeIn 0.5s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    }
+}
