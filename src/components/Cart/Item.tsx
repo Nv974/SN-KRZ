@@ -15,6 +15,8 @@ type ItemProps = {
     }
 };
 
+//item
+
 export default function Item({ item } : ItemProps) {
     const dispatch = useDispatch();
 
