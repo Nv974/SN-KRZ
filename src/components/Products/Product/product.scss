@@ -2,6 +2,11 @@
     width: 24rem;
     margin: 1rem;
     padding: 1rem 0;
+
+    @media (max-width: 500px) {
+        width: 22rem;
+    }
+
     &__img {
         margin: 1rem;
         cursor: pointer;
@@ -9,6 +14,10 @@
             width: 22rem;
             //animation: move 0.5s;
             position: relative;
+
+            @media (max-width: 500px) {
+                width: 20rem;
+            }
 
             &:hover {
                 //animation: fadeImg 1s;
