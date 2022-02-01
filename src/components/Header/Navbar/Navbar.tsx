@@ -3,8 +3,21 @@ import './navbar.scss';
 import { Link } from 'react-router-dom';
 
 export default function Navbar() {
+    const burgerToggler = () => {
+        const categories = document.querySelector(
+            '.navbar__categories',
+        ) as HTMLUListElement;
+        categories.classList.toggle('navbar__categories--open');
+
+        const burger = document.querySelector(
+            '.navbar__burger',
+        ) as HTMLSpanElement;
+        burger.classList.toggle('navbar__burger--open');
+    };
+
     return (
         <nav className='navbar'>
+            <span className='navbar__burger' onClick={burgerToggler}></span>
             <ul className='navbar__categories'>
                 <li>
                     <Link to='#'>homme</Link>

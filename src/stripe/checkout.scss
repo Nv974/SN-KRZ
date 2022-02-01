@@ -38,6 +38,11 @@
         box-shadow: rgb(167, 167, 167) 5px 5px 20px;
         animation: cardSlide 0.5s;
 
+        @media (max-width: 420px) {
+            width: 90vw;
+            height: 190px;
+        }
+
         @keyframes cardSlide {
             to {
                 right: 00px;

@@ -54,6 +54,10 @@
                 align-self: center;
             }
 
+            @media (max-width: 800px) {
+                width: 85%;
+            }
+
             input,
             select {
                 border-radius: 5px;
@@ -72,18 +76,20 @@
 
             &__address {
                 select {
-                    //margin: 0 4rem;
                     margin-top: 1rem;
                 }
 
                 &__name,
                 &__city {
-                    //margin: 0 4rem;
                     display: flex;
                     gap: 1rem;
                     input {
                         margin: 0;
                         flex-grow: 1;
+                    }
+
+                    @media (max-width: 800px) {
+                        flex-direction: column;
                     }
                 }
 
@@ -100,9 +106,18 @@
         &__btns {
             width: 600px;
             align-self: end;
+            position: relative;
 
             @media (max-width: 1200px) {
                 align-self: center;
+            }
+
+            @media (max-width: 800px) {
+                &__back {
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
             }
 
             a {
@@ -129,6 +144,11 @@
             width: 500px;
             display: flex;
             flex-direction: column;
+
+            @media (max-width: 800px) {
+                width: 100vw;
+                align-items: center;
+            }
 
             p {
                 margin-bottom: 1rem;
@@ -158,6 +178,11 @@
             justify-content: space-between;
             height: 0;
             margin-top: 1.5rem;
+
+            @media (max-width: 800px) {
+                width: 90vw;
+                margin-left: 5vw;
+            }
 
             &__left {
                 font-size: 0.9rem;
@@ -190,6 +215,10 @@
                 font-weight: bold;
                 font-size: 1.1rem;
                 cursor: pointer;
+
+                @media (max-width: 800px) {
+                    width: 80vw;
+                }
             }
 
             &--disabled {
