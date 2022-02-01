@@ -7,9 +7,19 @@
         position: relative;
         height: 6rem;
 
+        @media (max-width: 1050px) {
+            justify-content: flex-end;
+            padding: 1rem;
+        }
+
         &__contact {
             display: flex;
+            flex-direction: column;
             gap: 1rem;
+
+            @media (max-width: 1050px) {
+                display: none;
+            }
 
             & > * {
                 display: flex;
@@ -31,6 +41,11 @@
             left: 50%;
             transform: translateX(-50%);
             top: 1rem;
+
+            @media (max-width: 1050px) {
+                transform: translateX(0);
+                left: 1rem;
+            }
         }
 
         &__browse {

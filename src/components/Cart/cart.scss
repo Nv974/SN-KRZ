@@ -52,6 +52,10 @@
             flex-direction: column;
             overflow: scroll;
             animation: slideToLeft 0.5s;
+
+            @media (max-width: 500px) {
+                width: 85%;
+            }
         }
 
         @keyframes slideToLeft {
